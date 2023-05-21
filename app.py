@@ -336,7 +336,7 @@ navbar = dbc.Navbar(
                     dbc.NavItem(dbc.NavLink(html.A("Gráficos", href="/#charts", className="nav-link-custom"))),
                     dbc.NavItem(dbc.NavLink(html.A("Descargar Datos", href="/#descargar-seccion", className="nav-link-custom"))),
                     dbc.NavItem(dbc.NavLink(html.A("ODIS", href="https://odisdkp.firebaseapp.com", target="_blank", className="nav-link-custom"))),
-                    dbc.NavItem(dbc.NavLink(html.A("Contacto", href="mailto:diego.bravo@ocaglobal.com?subject=Consulta%20SCE%20Florida", className="nav-link-custom"))),
+                    dbc.NavItem(dbc.NavLink(html.A("Contacto", href="mailto:diego.bravo@ocaglobal.com?subject=Consulta%20SCE%20Cordillera", className="nav-link-custom"))),
 
                 ],
                 navbar=True,
