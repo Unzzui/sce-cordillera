@@ -97,6 +97,10 @@ menor_cumplimiento = df['Cumplimiento'].min()
 menor_cumplimiento_formatted = "{:.0%}".format(menor_cumplimiento)
 numero_ticket_menor = df.loc[df['Cumplimiento'].idxmin(), 'N Ticket']
 
+display_bar_logo = {
+    'displayModeBar':True,
+    'displaylogo':False,
+}
 
 def supervisor_chart():
     figure = {
@@ -473,7 +477,7 @@ allá donde vayan y trabajamos para garantizar que ni ayer, ni hoy, ni mañana n
         ),
         dbc.Row(
             dbc.Col(
-                dcc.Graph(id="month-figure"),
+                dcc.Graph(id="month-figure", config=display_bar_logo),
             )
         ),
         dbc.Row(
@@ -490,7 +494,7 @@ allá donde vayan y trabajamos para garantizar que ni ayer, ni hoy, ni mañana n
         ),
         dbc.Row(
             dbc.Col(
-                dcc.Graph(id="grafico-cumplimiento"),
+                dcc.Graph(id="grafico-cumplimiento", config=display_bar_logo),
             )
         ),
 
@@ -568,7 +572,7 @@ allá donde vayan y trabajamos para garantizar que ni ayer, ni hoy, ni mañana n
             [
                 dbc.Col(
                     dcc.Graph(id="supervisor-figure",
-                              figure=supervisor_chart())
+                              figure=supervisor_chart(),config=display_bar_logo)
                 )
             ]
         ),
@@ -592,7 +596,7 @@ allá donde vayan y trabajamos para garantizar que ni ayer, ni hoy, ni mañana n
         ),
         dbc.Row(
             dbc.Col(
-                dcc.Graph(id="map-figure", figure=map_fig(),
+                dcc.Graph(id="map-figure", figure=map_fig(),config=display_bar_logo,
                           style={'width': '100%', 'height': '90vh'}),
             )
 
